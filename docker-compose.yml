@@ -1,0 +1,22 @@
+services:
+  frontend:
+    image: node:20
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    command: npm build && npm start
+    depends_on:
+      - backend
+    restart: always
+
+  backend:
+    image: node:20
+    working_dir: /app
+    volumes:
+      - ./server:/app
+    ports:
+      - "3001:3001"
+    command: npm start
+    restart: always

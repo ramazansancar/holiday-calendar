@@ -1,0 +1,33 @@
+{
+  "name": "holiday-calendar-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "type": "module",
+  "keywords": [
+    "holiday",
+    "calendar",
+    "server",
+    "germany holidays",
+    "api"
+  ],
+  "author": "Ramazan Sancar <ramazansancar@github.com>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.16.0",
+    "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}

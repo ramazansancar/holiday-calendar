@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Holiday Calendar
 
-## Getting Started
+Bu proje, farklı ülkelerin resmi tatil günlerini gösteren bir takvim uygulamasıdır.
 
-First, run the development server:
+Frontend için Next.js v15 kullanılarak Ant Design ve Rsuite UI kütüphaneleri kullanılmıştır.
+
+Backend için Node.js v20 kullanılarak Express.js kullanılmıştır.
+
+## Kullanılan Teknolojiler
+
+Bu projede kullanılan teknolojiler aşağıdaki gibidir:
+
+Her iki alan içinde Node 20.x için kontrol edilmiştir.
+
+- Frontend
+  - Next.js
+  - React
+  - TypeScript
+  - Tailwind CSS
+  - Ant Design
+  - Rsuite UI
+  - Pdf-lib (Henüz entegre edilmedi)
+  - XLSX
+  - File-Saver
+  - DayJS
+  - SWR
+  - PostCSS
+  - ESLint
+  - Iconify
+
+- Backend
+  - Node.js
+  - Express.js
+  - Express-Async-Handler
+  - Axios
+  - Cors
+  - Nodemon
+  - EsLint
+  - swagger-ui-express (Henüz entegre edilmedi)
+
+## Kurulum
+
+Bu projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+**Not:** Proje için Node.js ve npm yüklü olmalıdır. Her iki alan içinde ayrı olarak terminalde komutların çalıştırılması gerekmektedir.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/ramazansancar/holiday-calendar.git
+cd holiday-calendar
+
+# Frontend
+npm install
+npm run build
+npm run start
+
+# Backend
+cd server
+npm install
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Kullanım
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Uygulama çalıştırıldıktan sonra, uygulama üzerindeki ülkelerin resmi tatil günlerini görebilirsiniz.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Görüntülemek için [http://localhost:3000](http://localhost:3000) adresine gidin.
 
-## Learn More
+Api üzerinden veri çekmek için [http://localhost:3001](http://localhost:3001) adresine gidin.
 
-To learn more about Next.js, take a look at the following resources:
+## Bilinen Sorunlar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Lokasyonlarından veri gelmemektedir:
+  - DE-MV (Sorun kullanılan api kaynaklıdır.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Lisans
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[./LICENSE](./LICENSE)
